@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sq">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TrainKos - Orari</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="loader">TrainKos</div>
+
+  <header>
+    <div class="logo">TrainKos</div>
+    <nav>
+      <a href="index.html">Ballina</a>
+      <a href="about.html">Rreth Nesh</a>
+      <a href="orari.html">Orari</a>
+      <a href="contact.html">Kontakt</a>
+      <span id="clock"></span>
+      <span class="toggle">🌙</span>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="valdriiin.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Orari i Trenave</h1>
+      <p>Shiko udhëtimet e sakta dhe destinacionet që ofrojmë</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="reveal">Orari i Trenave</h2>
+    <input type="text" class="search reveal" placeholder="Kërko destinacion..." onkeyup="filterTable()">
+    <table class="reveal">
+      <thead>
+        <tr>
+          <th>Relacioni</th>
+          <th>Nisja</th>
+          <th>Arritja</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prishtinë - Pejë</td>
+          <td>08:00</td>
+          <td>10:30</td>
+        </tr>
+        <tr>
+          <td>Prishtinë - Mitrovicë</td>
+          <td>09:00</td>
+          <td>10:00</td>
+        </tr>
+        <tr>
+          <td>Prishtinë - Hani i Elezit</td>
+          <td>12:00</td>
+          <td>13:30</td>
+        </tr>
+        <tr>
+          <td>Mitrovicë - Pejë</td>
+          <td>14:00</td>
+          <td>16:00</td>
+        </tr>
+        <tr>
+          <td>Prishtinë - Ferizaj</td>
+          <td>07:30</td>
+          <td>08:30</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>© 2026 TrainKos</footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

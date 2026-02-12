@@ -1,0 +1,293 @@
+:root {
+    --primary: #0b1f3a;
+    --secondary: #c8102e;
+    --light: #f4f6f9;
+    --white: #ffffff;
+}
+
+body.dark {
+    --light: #0f172a;
+    --white: #1e293b;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--light);
+    transition: 0.4s;
+    opacity: 0;
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+    z-index: 2000;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+header.scrolled {
+    background: var(--primary);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+.toggle {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 80px;
+    top: 40%;
+    animation: fadeUp 1.5s ease;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: var(--secondary);
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 120px 80px;
+    background: var(--white);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--light);
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Counter */
+.counter {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+/* Table */
+input.search {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Form */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 100%;
+}
+
+
+/* REZERVO SECTION */
+.rezervo-section {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.rezervo-box {
+    width: 100%;
+    max-width: 1100px;
+    padding: 70px 40px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb, #ff6a00);
+}
+
+.rezervo-box h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.rezervo-box p {
+    margin-bottom: 35px;
+    opacity: 0.9;
+}
+
+.rezervo-form {
+    display: flex;
+    justify-content: center;
+    max-width: 650px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.rezervo-form input {
+    flex: 1;
+    padding: 18px 25px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.rezervo-form input::placeholder {
+    color: #eee;
+}
+
+.rezervo-form button {
+    padding: 18px 35px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rezervo-form button:hover {
+    background: #f1f1f1;
+}
